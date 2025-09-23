@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>It’s over 9000</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#f7f7f7; }
+    .wrap { max-width:520px; margin:60px auto; background:#fff; padding:24px; border:1px solid #ddd; border-radius:8px; }
+    h1 { margin:0 0 16px; font-size:20px; }
+    form { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    input[type="text"] { width:140px; padding:8px; }
+    select { padding:8px; }
+    input[type="submit"] { padding:10px 16px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Basic Calculator</h1>
+    <form id="calc">
+      <input id="left" type="text" placeholder="Left (>=0)" />
+      <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <input id="right" type="text" placeholder="Right (>=0)" />
+      <input type="submit" value="Try me!" />
+    </form>
+  </div>
+
+  <script>
+    setInterval(() => alert("Please, use me..."), 30000);
+
+    const form  = document.getElementById("calc");
+    const left  = document.getElementById("left");
+    const right = document.getElementById("right");
+    const opSel = document.getElementById("op");
+
+    function isPosInt(str) { return /^\d+$/.test(str); }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const lraw = left.value.trim();
+      const rraw = right.value.trim();
+
+      if (!isPosInt(lraw) || !isPosInt(rraw)) {
+        alert("Error :(");
+        return;
+      }
+
+      const a = parseInt(lraw, 10);
+      const b = parseInt(rraw, 10);
+      const op = opSel.value;
+
+      if ((op === "/" || op === "%") && b === 0) {
+        console.log("It's over 9000!");
+        alert("It's over 9000!");
+        return;
+      }
+
+      let result;
+      switch (op) {
+        case "+": result = a + b; break;
+        case "-": result = a - b; break;
+        case "*": result = a * b; break;
+        case "/": result = a / b; break;
+        case "%": result = a % b; break;
+      }
+
+      console.log(result);
+      alert(result);
+    });
+  </script>
+</body>
+</html>
