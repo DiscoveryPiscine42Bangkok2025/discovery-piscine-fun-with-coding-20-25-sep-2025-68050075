@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #75dec2;
+}
+
+.menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #6a3415;
+}
+
+.menu li ul {
+  display: none;
+  position: absolute;
+  background: #8ce8eb;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li ul li {
+  display: block;
+}
+
+.menu li:hover ul {
+  display: block;
+}
