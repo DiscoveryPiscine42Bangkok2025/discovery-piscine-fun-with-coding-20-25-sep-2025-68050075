@@ -1,14 +1,28 @@
-  <style>
-    html, body { margin: 0; height: 100%; }
-    table {
-      width: 100%;
-      height: 100vh;          
-      border-collapse: collapse;
-      border: 1px solid black;
-    }
-    td {
-      width: 50%;
-      border-left: 1px solid black;
-    }
-    td:first-child { border-left: none; } 
-  </style>
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  height: 100vh;          
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td {
+  width: 50%;
+  border-left: 1px solid black;
+}
+
+td:first-child {
+  border-left: none;
+}
+
+.first {
+  background: pink;
+}
+
+.second {
+  background: powderblue;
+}
