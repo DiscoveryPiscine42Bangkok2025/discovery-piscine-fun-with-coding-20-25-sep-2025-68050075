@@ -1,0 +1,41 @@
+body, html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh; 
+  position: relative;
+}
+
+.bg1 {
+  background-image: url("https://cdn.pixabay.com/photo/2023/02/14/00/51/ice-7788590_1280.jpg"); 
+}
+
+.bg2 {
+  background-image: url("https://cdn.pixabay.com/photo/2017/03/28/22/55/night-photograph-2183637_1280.jpg"); 
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.block {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
